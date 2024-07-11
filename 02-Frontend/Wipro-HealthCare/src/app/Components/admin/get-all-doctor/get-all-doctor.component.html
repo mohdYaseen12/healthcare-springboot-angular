@@ -1,0 +1,38 @@
+
+<div class="table-striped table-bordered">
+    <h2 class="mt-4">All Doctors</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Doctor ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone No</th>
+          <th>Designation</th>
+          <th>Speciality</th>
+          <th>Qualification</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let doctor of doctors">
+          <td>{{ doctor.doctorId }}</td>
+          <td>{{ doctor.firstName }} {{ doctor.lastName }}</td>
+          <td>{{ doctor.email }}</td>
+          <td>{{ doctor.phoneNumber }}</td>
+          <td>{{ doctor.designation }}</td>
+          <td>{{ doctor.specialty }}</td>
+          <td>{{ doctor.qualification}}</td>
+          <td>
+            <button
+              class="btn btn-danger"
+              (click)="deleteDoctor(doctor.doctorId)"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

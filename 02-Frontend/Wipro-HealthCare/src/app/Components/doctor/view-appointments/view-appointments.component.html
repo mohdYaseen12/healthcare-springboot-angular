@@ -1,0 +1,28 @@
+<div class="table-striped table-bordered mt-5">
+  <h2>View Appointments</h2>
+  <form (ngSubmit)="getAppointments()">
+    <div class="form-group">
+      <label for="doctorId">Doctor ID</label>
+      <input
+        type="number"
+        class="form-control"
+        id="doctorId"
+        [(ngModel)]="doctorId"
+        name="doctorId"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">View</button>
+  </form>
+  <div *ngIf="appointments">
+    <h3 class="mt-5">Appointments</h3>
+    <ul class="list-group">
+      <li *ngFor="let appointment of appointments" class="list-group-item">
+        <p><strong>ID:</strong> {{ appointment.appointmentId }}</p>
+        <p><strong>Date:</strong> {{ appointment.appointmentDate }}</p>
+        <p><strong>Time:</strong> {{ appointment.appointmentTime }}</p>
+        <p><strong>Patient:</strong> {{ appointment.patientId }}</p>
+      </li>
+    </ul>
+  </div>
+</div>

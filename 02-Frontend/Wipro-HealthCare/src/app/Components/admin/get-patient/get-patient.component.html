@@ -1,0 +1,29 @@
+
+<div class="table-striped table-bordered">
+    <h2 class="mt-4">Get Patient</h2>
+    <div class="form-group">
+      <label for="consultationId">Patient ID</label>
+      <input
+        type="number"
+        class="form-control"
+        id="consultationId"
+        [(ngModel)]="patientId"
+        placeholder="Enter Patient ID"
+      />
+    </div>
+    <button class="btn btn-primary mt-3" (click)="getPatient()">
+      Get Patient
+    </button>
+  
+    <div *ngIf="patient" class="mt-4">
+      <h3>Patient Details</h3>
+      <p><strong>Doctor ID:</strong> {{ patient.patientId }}</p>
+      <p><strong>Name:</strong> {{ patient.firstName }} {{ patient.lastName }}</p>
+      <p><strong>Email:</strong> {{ patient.email }}</p>
+      <p><strong>Phone Number:</strong> {{ patient.phoneNumber }}</p>
+      <p><strong>Gender:</strong> {{ patient.gender }}</p>
+      <p><strong>Date of Birth:</strong> {{ patient.dateOfBirth }}</p>
+      <p><strong>Address:</strong> {{ patient.address }}</p>
+    </div>
+  </div>
+  

@@ -1,0 +1,91 @@
+<!-- admin.component.html -->
+<div class="container-fluid">
+  <div class="row">
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar bg-primary">
+          <div class="position-sticky pt-3">
+              <ul class="nav flex-column">
+                  <li class="nav-item">
+                      <a href="http://localhost:4200/admin/register-admin" class="nav-link text-white active">
+                          <i class="bi bi-person-plus"></i> Register Admin
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="http://localhost:4200/admin/register-doctor" class="nav-link text-white">
+                          <i class="bi bi-person-plus-fill"></i> Register Doctor
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="http://localhost:4200/admin/get-all-doctor" class="nav-link text-white">
+                          <i class="bi bi-people"></i> Get All Doctors
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="http://localhost:4200/admin/view-doctor" class="nav-link text-white">
+                          <i class="bi bi-person"></i> Get Doctor
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="http://localhost:4200/admin/get-all-patient" class="nav-link text-white">
+                          <i class="bi bi-people-fill"></i> Get All Patients
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="http://localhost:4200/admin/get-patient" class="nav-link text-white">
+                          <i class="bi bi-person"></i> Get Patient
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="http://localhost:4200/admin/update-doctor" class="nav-link text-white">
+                          <i class="bi bi-pencil-square"></i> Update Doctor
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+          <!-- <div class="text-center">
+              <img src="assets/images/hospital-management.jpg" alt="Hospital Management" class="img-fluid mt-4">
+          </div> -->
+          <router-outlet></router-outlet>
+      </main>
+  </div>
+</div>
+
+<div class="table-striped table-bordered">
+    <h2 class="mt-4">All Doctors</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Patient ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone No</th>
+          <th>Gender</th>
+          <th>Date Of Birth</th>
+          <th>Address</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let patient of patients">
+          <td>{{ patient.patientId }}</td>
+          <td>{{ patient.firstName }} {{ patient.lastName }}</td>
+          <td>{{ patient.email }}</td>
+          <td>{{ patient.phoneNumber }}</td>
+          <td>{{ patient.gender }}</td>
+          <td>{{ patient.dateOfBirth }}</td>
+          <td>{{ patient.address}}</td>
+          <td>
+            <button
+              class="btn btn-danger"
+              (click)="deletePatient(patient.patientId)"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

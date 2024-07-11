@@ -1,0 +1,49 @@
+
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-header">
+      <h3>Update Doctor</h3>
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" class="form-control" [(ngModel)]="email" name="email">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" class="form-control" [(ngModel)]="password" name="password">
+        </div>
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" class="form-control" [(ngModel)]="firstName" name="firstName">
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" class="form-control" [(ngModel)]="lastName" name="lastName">
+        </div>
+        <div class="form-group">
+          <label for="phoneNumber">Phone Number</label>
+          <input type="text" id="phoneNumber" class="form-control" [(ngModel)]="phoneNumber" name="phoneNumber">
+        </div>
+        <div class="form-group">
+          <label for="specialty">Specialty</label>
+          <input type="text" id="specialty" class="form-control" [(ngModel)]="specialty" name="specialty">
+        </div>
+        <div class="form-group">
+          <label for="qualification">Qualification</label>
+          <input type="text" id="qualification" class="form-control" [(ngModel)]="qualification" name="qualification">
+        </div>
+        <div class="form-group">
+          <label for="experience">Experience</label>
+          <input type="text" id="experience" class="form-control" [(ngModel)]="experience" name="experience">
+        </div>
+        <div class="form-group">
+          <label for="designation">Designation</label>
+          <input type="text" id="designation" class="form-control" [(ngModel)]="designation" name="designation">
+        </div>
+        <button type="submit" class="btn btn-primary">Update</button>
+      </form>
+    </div>
+  </div>
+</div>

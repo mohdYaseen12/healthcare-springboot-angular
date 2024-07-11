@@ -1,0 +1,35 @@
+<div class="table-striped table-bordered">
+  <h2 class="mt-4">Get Consultation</h2>
+  <div class="form-group">
+    <label for="consultationId">Consultation ID</label>
+    <input
+      type="number"
+      class="form-control"
+      id="consultationId"
+      [(ngModel)]="consultationId"
+      placeholder="Enter Consultation ID"
+    />
+  </div>
+  <button class="btn btn-primary mt-3" (click)="getConsultation()">
+    Get Consultation
+  </button>
+
+  <div *ngIf="consultation" class="mt-4">
+    <h3>Consultation Details</h3>
+    <p><strong>Consultation ID:</strong> {{ consultation.consultingId }}</p>
+    <p><strong>Current Symptoms:</strong> {{ consultation.currentSymptoms }}</p>
+    <p>
+      <strong>Physical Examination:</strong>
+      {{ consultation.physicalExamination }}
+    </p>
+    <p><strong>Treatment Plan:</strong> {{ consultation.treatmentPlan }}</p>
+    <p>
+      <strong>Recommended Tests:</strong> {{ consultation.recommendedTests }}
+    </p>
+    <p><strong>Prescription:</strong> {{ consultation.prescription }}</p>
+    <p>
+      <strong>Appointment ID:</strong>
+      {{ consultation.appointment?.appointmentId }}
+    </p>
+  </div>
+</div>

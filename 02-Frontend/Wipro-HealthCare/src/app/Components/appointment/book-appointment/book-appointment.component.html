@@ -1,0 +1,64 @@
+<!-- <p>patient-homepage works!</p> -->
+<!-- patient-homepage.component.html -->
+<div class="col-md-3 col-lg-2 d-md-block bg-dark sidebar bg-primary">
+  <div class="row">
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-success text-white sidebar">
+          <div class="position-sticky pt-3">
+              <ul class="nav flex-column">
+                  <li class="nav-item mb-2">
+                      <a href="http://localhost:4200/appointment/book-appointment" class="nav-link text-white active">
+                          <i class="bi bi-house-door me-2"></i> Book Appointment
+                      </a>
+                  </li>
+                  <li class="nav-item mb-2">
+                      <a href="http://localhost:4200/appointment/delete" class="nav-link text-white">
+                          <i class="bi bi-person-circle me-2"></i> Delete Appointment
+                      </a>
+                  </li>
+                  
+                  
+              </ul>
+          </div>
+      </nav>
+
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+              <h1 class="h2">Patient Dashboard</h1>
+          </div>
+          <!-- Content will be injected here by Angular Router -->
+          <!-- <router-outlet></router-outlet> -->
+      </main>
+  </div>
+</div>
+
+<div class="container mt-5">
+    <h2>Book Appointment</h2>
+    <form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="patientId" class="form-label">Patient ID</label>
+        <input id="patientId" formControlName="patientId" class="form-control" type="number">
+      </div>
+      <div class="mb-3">
+        <label for="doctorId" class="form-label">Doctor ID</label>
+        <input id="doctorId" formControlName="doctorId" class="form-control" type="number">
+      </div>
+      <div class="mb-3">
+        <label for="appointmentDate" class="form-label">Appointment Date</label>
+        <input id="appointmentDate" formControlName="appointmentDate" class="form-control" type="date">
+      </div>
+      <div class="mb-3">
+        <label for="appointmentTime" class="form-label">Appointment Time</label>
+        <input id="appointmentTime" formControlName="appointmentTime" class="form-control" type="time">
+      </div>
+      <div class="mb-3">
+        <label for="symptoms" class="form-label">Symptoms</label>
+        <input id="symptoms" formControlName="symptoms" class="form-control" type="text">
+      </div>
+      <div class="mb-3">
+        <label for="status" class="form-label">Status</label>
+        <input id="status" formControlName="status" class="form-control" type="text">
+      </div>
+      <button type="submit" class="btn btn-primary">Book Appointment</button>
+    </form>
+  </div>
+  

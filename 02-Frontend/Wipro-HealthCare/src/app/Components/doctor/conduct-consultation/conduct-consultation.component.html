@@ -1,0 +1,35 @@
+<div class="container mt-5">
+    <h2>Conduct Consultation</h2>
+    <form (ngSubmit)="conductConsultation()">
+      <div class="form-group">
+        <label for="appointmentId">Appointment ID</label>
+        <input type="number" class="form-control" id="appointmentId" [(ngModel)]="appointmentId" name="appointmentId" required>
+      </div>
+      <div class="form-group">
+        <label for="currentSymptoms">Current Symptoms</label>
+        <textarea class="form-control" id="currentSymptoms" [(ngModel)]="consultation.currentSymptoms" name="currentSymptoms" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="physicalExamination">Physical Examination</label>
+        <textarea class="form-control" id="physicalExamination" [(ngModel)]="consultation.physicalExamination" name="physicalExamination" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="treatmentPlan">Treatment Plan</label>
+        <textarea class="form-control" id="treatmentPlan" [(ngModel)]="consultation.treatmentPlan" name="treatmentPlan" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="recommendedTests">Recommended Tests</label>
+        <textarea class="form-control" id="recommendedTests" [(ngModel)]="consultation.recommendedTests" name="recommendedTests"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="prescription">Prescription</label>
+        <textarea class="form-control" id="prescription" [(ngModel)]="consultation.prescription" name="prescription" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    </form>
+    <div *ngIf="response">
+      <h3 class="mt-5">Response</h3>
+      <p>{{ response }}</p>
+    </div>
+  </div>
+  

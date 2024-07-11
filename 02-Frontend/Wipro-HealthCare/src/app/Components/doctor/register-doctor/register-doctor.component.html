@@ -1,0 +1,106 @@
+
+<div class="container mb-5">
+  <h2>Register Doctor</h2>
+  <form (ngSubmit)="registerDoctor()">
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input
+        type="text"
+        id="firstName"
+        class="form-control"
+        [(ngModel)]="doctor.firstName"
+        name="firstName"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input
+        type="text"
+        id="lastName"
+        class="form-control"
+        [(ngModel)]="doctor.lastName"
+        name="lastName"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        class="form-control"
+        [(ngModel)]="doctor.email"
+        name="email"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        class="form-control"
+        [(ngModel)]="doctor.password"
+        name="password"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="designation">Designation</label>
+      <input
+        type="text"
+        id="designation"
+        class="form-control"
+        [(ngModel)]="doctor.designation"
+        name="designation"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="phoneNumber">Phone Number</label>
+      <input
+        type="text"
+        id="phoneNumber"
+        class="form-control"
+        [(ngModel)]="doctor.phoneNumber"
+        name="phoneNumber"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="specialty">Specialty</label>
+      <input
+        type="text"
+        id="specialty"
+        class="form-control"
+        [(ngModel)]="doctor.specialty"
+        name="specialty"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="experience">Experience (Years)</label>
+      <input
+        type="number"
+        id="experience"
+        class="form-control"
+        [(ngModel)]="doctor.experience"
+        name="experience"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="qualification">Qualification</label>
+      <input
+        type="text"
+        id="qualification"
+        class="form-control"
+        [(ngModel)]="doctor.qualification"
+        name="qualification"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Register</button>
+  </form>
+</div>

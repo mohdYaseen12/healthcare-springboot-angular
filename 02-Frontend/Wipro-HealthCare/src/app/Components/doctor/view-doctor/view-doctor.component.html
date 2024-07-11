@@ -1,0 +1,29 @@
+<div class="table-striped table-bordered mt-5">
+  <h2>View Doctor</h2>
+  <form (ngSubmit)="getDoctor()">
+    <div class="form-group">
+      <label for="doctorId">Doctor ID</label>
+      <input
+        type="number"
+        class="form-control"
+        id="doctorId"
+        [(ngModel)]="doctorId"
+        name="doctorId"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">View</button>
+  </form>
+  <div *ngIf="doctor">
+    <h3 class="mt-5">Doctor Details</h3>
+    <p><strong>ID:</strong> {{ doctor.doctorId }}</p>
+    <p><strong>First Name:</strong> {{ doctor.firstName }}</p>
+    <p><strong>Last Name:</strong> {{ doctor.lastName }}</p>
+    <p><strong>Email:</strong> {{ doctor.email }}</p>
+    <p><strong>Designation:</strong> {{ doctor.designation }}</p>
+    <p><strong>Phone Number:</strong> {{ doctor.phoneNumber }}</p>
+    <p><strong>Specialty:</strong> {{ doctor.specialty }}</p>
+    <p><strong>Experience:</strong> {{ doctor.experience }}</p>
+    <p><strong>Qualification:</strong> {{ doctor.qualification }}</p>
+  </div>
+</div>

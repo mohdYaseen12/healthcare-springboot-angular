@@ -1,0 +1,29 @@
+<div class="container">
+    <h2 class="mt-4">Get Doctor</h2>
+    <div class="form-group">
+      <label for="consultationId">Doctor ID</label>
+      <input
+        type="number"
+        class="form-control"
+        id="consultationId"
+        [(ngModel)]="doctorId"
+        placeholder="Enter Doctor ID"
+      />
+    </div>
+    <button class="btn btn-primary mt-3" (click)="getDoctor()">
+      Get Doctor
+    </button>
+  
+    <div *ngIf="doctor" class="mt-4">
+      <h3>Doctor Details</h3>
+      <p><strong>Doctor ID:</strong> {{ doctor?.doctorId }}</p>
+      <p><strong>Name:</strong> {{ doctor?.firstName }} {{ doctor?.lastName }}</p>
+      <p><strong>Email:</strong> {{ doctor?.email }}</p>
+      <p><strong>Designation:</strong> {{ doctor?.designation }}</p>
+      <p><strong>Phone Number:</strong> {{ doctor?.phoneNumber }}</p>
+      <p><strong>Speciality:</strong> {{ doctor?.specialty }}</p>
+      <p><strong>Experience:</strong> {{ doctor?.email }}</p>
+      <p><strong>Qualification:</strong> {{ doctor?.qualification }}</p>
+    </div>
+  </div>
+  

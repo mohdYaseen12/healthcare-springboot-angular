@@ -1,0 +1,36 @@
+<div class="table-striped table-bordered">
+  <h2 class="mt-4">All Consultations</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Consultation ID</th>
+        <th>Current Symptoms</th>
+        <th>Physical Examination</th>
+        <th>Treatment Plan</th>
+        <th>Recommended Tests</th>
+        <th>Prescription</th>
+        <th>Appointment ID</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let consultation of consultations">
+        <td>{{ consultation.consultingId }}</td>
+        <td>{{ consultation.currentSymptoms }}</td>
+        <td>{{ consultation.physicalExamination }}</td>
+        <td>{{ consultation.treatmentPlan }}</td>
+        <td>{{ consultation.recommendedTests }}</td>
+        <td>{{ consultation.prescription }}</td>
+        <td>{{ consultation.appointment?.appointmentId }}</td>
+        <td>
+          <button
+            class="btn btn-danger"
+            (click)="deleteConsultation(consultation.consultingId)"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

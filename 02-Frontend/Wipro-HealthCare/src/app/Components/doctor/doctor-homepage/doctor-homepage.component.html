@@ -1,0 +1,42 @@
+<!-- admin.component.html -->
+<div class="container-fluid">
+    <div class="row">
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar bg-primary">
+        <div class="position-sticky pt-3">
+          <ul class="nav flex-column">
+            
+            <li class="nav-item">
+              <!-- <a class="nav-link" routerLink="src\app\Components\doctor\register-doctor">Register Doctors</a> -->
+               <a href="http://localhost:4200/admin/register-doctor"class="nav-link text-white active">Register Doctor</a>
+            </li>
+            <li class="nav-item">
+              <!-- <a class="nav-link" routerLink="src\app\Components\admin\get-all-doctor">Get All Doctors</a> -->
+              <a href="http://localhost:4200/admin/get-all-doctor" class="nav-link text-white active">Get All Doctors</a>
+            </li>
+            <li class="nav-item">
+              <!-- <a class="nav-link" routerLink="src\app\Components\doctor\view-doctor">Get Doctor</a> -->
+              <a href="http://localhost:4200/admin/get-doctor" class="nav-link text-white active">Get Doctor</a>
+            </li>
+            <li class="nav-item">
+              <!-- <a class="nav-link" routerLink="src\app\Components\admin\get-all-patient">Get All Patient</a> -->
+              <a href="http://localhost:4200/admin/get-all-patient" class="nav-link text-white active">Get All Patient</a>
+            </li>
+            <li class="nav-item">
+              <!-- <a class="nav-link" routerLink="src\app\Components\admin\get-patient">Get Patient</a> -->
+              <a href="http://localhost:4200/admin/get-patient" class="nav-link text-white active">Get Patient</a>
+            </li>
+            <li class="nav-item">
+              <!-- <a class="nav-link" routerLink="src\app\Components\admin\update-doctor">Update Doctor</a> -->
+              <a href="http://localhost:4200/admin/update-doctor" class="nav-link text-white active">Update Doctor</a>
+            </li>
+           
+          </ul>
+        </div>
+      </nav>
+  
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <router-outlet></router-outlet>
+      </main>
+    </div>
+  </div>
+  
